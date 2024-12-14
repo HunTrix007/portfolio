@@ -11,6 +11,7 @@
 
 $(window).on("load", function() {
 	var preload = $('.preloader');
+	console.log(preload);	
 	preload.find('.spinner').fadeOut(function(){
 		preload.fadeOut();
 	});
