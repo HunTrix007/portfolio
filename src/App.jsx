@@ -26,6 +26,7 @@ function App() {
     var preload = document.querySelector('.preloader');
     var spinner = preload?.querySelector('.spinner');
     if(spinner){
+      preload.style.display = "none";
       spinner.style.display = "none";
     }
   }, [])
