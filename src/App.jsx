@@ -23,11 +23,13 @@ import { useEffect } from "react";
 function App() {
 
   useEffect(() => {
-    var preload = document.querySelector('.preloader');
-    var spinner = preload?.querySelector('.spinner');
-    if(spinner){
-      preload.style.display = "none";
-      spinner.style.display = "none";
+    document.onload = function () {
+      var preload = document.querySelector('.preloader');
+      var spinner = preload?.querySelector('.spinner');
+      if(spinner){
+        preload.style.display = "none";
+        spinner.style.display = "none";
+      }
     }
   }, [])
   return (
