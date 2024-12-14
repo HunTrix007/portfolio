@@ -25,7 +25,7 @@ function App() {
   useEffect(() => {
     var preload = document.querySelector('.preloader');
     var spinner = preload?.querySelector('.spinner');
-    if(spinner && spinner.style.display == "block"){
+    if(spinner){
       spinner.style.display = "none";
     }
   }, [])
