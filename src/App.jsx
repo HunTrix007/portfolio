@@ -83,11 +83,11 @@ function App() {
             <div className="profile">
 
               {/* profile image */}
-              <div className="slide" style={{backgroundImage: 'url(/src/assets/images/bg.jpg)'}}></div>
+              <div className="slide" style={{backgroundImage: 'url(./src/assets/images/bg.jpg)'}}></div>
 
               {/* profile photo */}
               <div className="image">
-                <img src="/src/assets/images/profile.png" alt="" />
+                <img src="./src/assets/images/profile.png" alt="" />
               </div>
 
               {/* profile titles */}
@@ -342,7 +342,7 @@ function App() {
                     <div className="client-item">
                       <div className="image">
                         <a target="_blank" href="https://www.google.com">
-                          <img src="/src/assets/images/clients/client_1.png" alt="" />
+                          <img src="./src/assets/images/clients/client_1.png" alt="" />
                         </a>
                       </div>
                     </div>
@@ -353,7 +353,7 @@ function App() {
                     <div className="client-item">
                       <div className="image">
                         <a target="_blank" href="https://www.google.com">
-                          <img src="/src/assets/images/clients/client_2.png" alt="" />
+                          <img src="./src/assets/images/clients/client_2.png" alt="" />
                         </a>
                       </div>
                     </div>
@@ -364,7 +364,7 @@ function App() {
                     <div className="client-item">
                       <div className="image">
                         <a target="_blank" href="https://www.google.com">
-                          <img src="/src/assets/images/clients/client_3.png" alt="" />
+                          <img src="./src/assets/images/clients/client_3.png" alt="" />
                         </a>
                       </div>
                     </div>
@@ -375,7 +375,7 @@ function App() {
                     <div className="client-item">
                       <div className="image">
                         <a target="_blank" href="https://www.google.com">
-                          <img src="/src/assets/images/clients/client_4.png" alt="" />
+                          <img src="./src/assets/images/clients/client_4.png" alt="" />
                         </a>
                       </div>
                     </div>
@@ -405,7 +405,7 @@ function App() {
                               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             </div>
                             <div className="user">
-                              <div className="img"><img src="/src/assets/images/man1.jpg" alt="" /></div>
+                              <div className="img"><img src="./src/assets/images/man1.jpg" alt="" /></div>
                               <div className="info">
                                 <div className="name">Helen Floyd</div>
                                 <div className="company">Art Director</div>
@@ -420,7 +420,7 @@ function App() {
                               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             </div>
                             <div className="user">
-                              <div className="img"><img src="/src/assets/images/man1.jpg" alt="" /></div>
+                              <div className="img"><img src="./src/assets/images/man1.jpg" alt="" /></div>
                               <div className="info">
                                 <div className="name">Robert Chase</div>
                                 <div className="company">CEO</div>
@@ -435,7 +435,7 @@ function App() {
                               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             </div>
                             <div className="user">
-                              <div className="img"><img src="/src/assets/images/man1.jpg" alt="" /></div>
+                              <div className="img"><img src="./src/assets/images/man1.jpg" alt="" /></div>
                               <div className="info">
                                 <div className="name">Helen Floyd</div>
                                 <div className="company">Art Director</div>
@@ -739,15 +739,15 @@ function App() {
                   <div className="col col-d-6 col-t-6 col-m-12 grid-item photo border-line-h">
                     <div className="box-item">
                       <div className="image">
-                        <a href="/src/assets/images/works/work1.jpg" className="has-popup-image">
-                          <img src="/src/assets/images/works/work1.jpg" alt="" />
+                        <a href="./src/assets/images/works/work1.jpg" className="has-popup-image">
+                          <img src="./src/assets/images/works/work1.jpg" alt="" />
                           <span className="info">
                             <span className="ion ion-image"></span>
                           </span>
                         </a>
                       </div>
                       <div className="desc">
-                        <a href="/src/assets/images/works/work1.jpg" className="name has-popup-image">Motorcycle Helmet</a>
+                        <a href="./src/assets/images/works/work1.jpg" className="name has-popup-image">Motorcycle Helmet</a>
                         <div className="category">Photo</div>
                       </div>
                     </div>
@@ -758,7 +758,7 @@ function App() {
                     <div className="box-item">
                       <div className="image">
                         <a href="https://vimeo.com/97102654" className="has-popup-video">
-                          <img src="/src/assets/images/works/work2.jpg" alt="" />
+                          <img src="./src/assets/images/works/work2.jpg" alt="" />
                           <span className="info">
                             <span className="ion ion-videocamera"></span>
                           </span>
@@ -776,7 +776,7 @@ function App() {
                     <div className="box-item">
                       <div className="image">
                         <a href="https://w.soundcloud.com/player/?visual=true&url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F221650664&show_artwork=true" className="has-popup-music">
-                          <img src="/src/assets/images/works/work3.jpg" alt="" />
+                          <img src="./src/assets/images/works/work3.jpg" alt="" />
                           <span className="info">
                             <span className="ion ion-music-note"></span>
                           </span>
@@ -794,7 +794,7 @@ function App() {
                     <div className="box-item">
                       <div className="image">
                         <a href="#popup-1" className="has-popup-media">
-                          <img src="/src/assets/images/works/work4.jpg" alt="" />
+                          <img src="./src/assets/images/works/work4.jpg" alt="" />
                           <span className="info">
                             <span className="ion ion-images"></span>
                           </span>
@@ -807,7 +807,7 @@ function App() {
                       <div id="popup-1" className="popup-box mfp-fade mfp-hide">
                         <div className="content">
                           <div className="image">
-                            <img src="/src/assets/images/works/work4.jpg" alt="" />
+                            <img src="./src/assets/images/works/work4.jpg" alt="" />
                           </div>
                           <div className="desc">
                             <div className="post-box">
@@ -857,15 +857,15 @@ function App() {
                   <div className="col col-d-6 col-t-6 col-m-12 grid-item photo border-line-h">
                     <div className="box-item">
                       <div className="image">
-                        <a href="/src/assets/images/works/work5.jpg" className="has-popup-image">
-                          <img src="/src/assets/images/works/work5.jpg" alt="" />
+                        <a href="./src/assets/images/works/work5.jpg" className="has-popup-image">
+                          <img src="./src/assets/images/works/work5.jpg" alt="" />
                           <span className="info">
                             <span className="ion ion-image"></span>
                           </span>
                         </a>
                       </div>
                       <div className="desc">
-                        <a href="/src/assets/images/works/work5.jpg" className="name has-popup-image">Gereal Travels</a>
+                        <a href="./src/assets/images/works/work5.jpg" className="name has-popup-image">Gereal Travels</a>
                         <div className="category">Photo</div>
                       </div>
                     </div>
@@ -876,7 +876,7 @@ function App() {
                     <div className="box-item">
                       <div className="image">
                         <a href="https://w.soundcloud.com/player/?visual=true&url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F221650664&show_artwork=true" className="has-popup-music">
-                          <img src="/src/assets/images/works/work8.jpg" alt="" />
+                          <img src="./src/assets/images/works/work8.jpg" alt="" />
                           <span className="info">
                             <span className="ion ion-music-note"></span>
                           </span>
@@ -894,7 +894,7 @@ function App() {
                     <div className="box-item">
                       <div className="image">
                         <a href="https://vimeo.com/97102654" className="has-popup-video">
-                          <img src="/src/assets/images/works/work6.jpg" alt="" />
+                          <img src="./src/assets/images/works/work6.jpg" alt="" />
                           <span className="info">
                             <span className="ion ion-videocamera"></span>
                           </span>
@@ -912,7 +912,7 @@ function App() {
                     <div className="box-item">
                       <div className="image">
                         <a href="#popup-2" className="has-popup-media">
-                          <img src="/src/assets/images/works/work7.jpg" alt="" />
+                          <img src="./src/assets/images/works/work7.jpg" alt="" />
                           <span className="info">
                             <span className="ion ion-images"></span>
                           </span>
@@ -925,7 +925,7 @@ function App() {
                       <div id="popup-2" className="popup-box mfp-fade mfp-hide">
                         <div className="content">
                           <div className="image">
-                            <img src="/src/assets/images/works/work7.jpg" alt="" />
+                            <img src="./src/assets/images/works/work7.jpg" alt="" />
                           </div>
                           <div className="desc">
                             <div className="post-box">
@@ -997,7 +997,7 @@ function App() {
                     <div className="box-item">
                       <div className="image">
                         <a href="blog-post.html">
-                          <img src="/src/assets/images/blog/blog1.jpg" alt="" />
+                          <img src="./src/assets/images/blog/blog1.jpg" alt="" />
                           <span className="info">
                             <span className="ion ion-document-text"></span>
                           </span>
@@ -1016,7 +1016,7 @@ function App() {
                     <div className="box-item">
                       <div className="image">
                         <a href="blog-post.html">
-                          <img src="/src/assets/images/blog/blog2.jpg" alt="" />
+                          <img src="./src/assets/images/blog/blog2.jpg" alt="" />
                           <span className="info">
                             <span className="ion ion-document-text"></span>
                           </span>
@@ -1035,7 +1035,7 @@ function App() {
                     <div className="box-item">
                       <div className="image">
                         <a href="blog-post.html">
-                          <img src="/src/assets/images/blog/blog3.jpg" alt="" />
+                          <img src="./src/assets/images/blog/blog3.jpg" alt="" />
                           <span className="info">
                             <span className="ion ion-document-text"></span>
                           </span>
