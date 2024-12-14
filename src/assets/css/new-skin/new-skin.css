@@ -737,6 +737,10 @@ input[type="file"] {
 	margin-top: 240px;
 }
 
+.card-started .slide {
+	background-image: url(../../images/bg.jpg)
+}
+
 .card-started .profile .slide {
 	height: 52%;
 }

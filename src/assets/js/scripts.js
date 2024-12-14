@@ -503,9 +503,9 @@ $(function () {
 		Google Maps
 	*/
 
-	if($('#map').length) {
-		initMap();
-	}
+	// if($('#map').length) {
+	// 	initMap();
+	// }
 
 
 	/*

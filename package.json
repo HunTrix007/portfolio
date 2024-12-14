@@ -2,7 +2,7 @@
   "name": "portfolio",
   "private": true,
   "version": "0.0.1",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -11,6 +11,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "imagesloaded": "^5.0.0",
+    "isotope-layout": "^3.0.6",
+    "jquery": "^3.7.1",
+    "jquery-slimscroll": "^1.3.8",
+    "jquery-validation": "^1.21.0",
+    "magnific-popup": "^1.2.0",
+    "owl.carousel": "^2.3.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -18,6 +25,7 @@
     "@eslint/js": "^9.15.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-legacy": "^6.0.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "eslint": "^9.15.0",
     "eslint-plugin-react": "^7.37.2",
