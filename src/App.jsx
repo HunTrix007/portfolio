@@ -19,7 +19,16 @@ import blog3 from "/src/assets/images/blog/blog3.jpg";
 
 // Import local scripts
 import "/src/assets/js/scripts.js";
+import { useEffect } from "react";
 function App() {
+
+  useEffect(() => {
+    var preload = document.querySelector('.preloader');
+    var spinner = preload?.querySelector('.spinner');
+    if(spinner && spinner.style.display == "block"){
+      spinner.style.display = "none";
+    }
+  }, [])
   return (
     <>
       <div className="page new-skin">
