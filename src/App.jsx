@@ -23,14 +23,14 @@ import { useEffect } from "react";
 function App() {
 
   useEffect(() => {
-    document.onload = function () {
+    setTimeout(() => {
       var preload = document.querySelector('.preloader');
       var spinner = preload?.querySelector('.spinner');
-      if(spinner){
+      if(spinner && preload.style.display != "none"){
         preload.style.display = "none";
         spinner.style.display = "none";
       }
-    }
+    }, 1000)
   }, [])
   return (
     <>
