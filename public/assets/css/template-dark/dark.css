@@ -559,3 +559,42 @@ input[type="submit"]:hover {
 .revs-item .info .company {
 	color: #999999;
 }
+
+.theme-customizer {
+	background-color:#313139 !important;
+}
+
+.ant-drawer-header {
+	background-color: #313139 !important;
+	color: white;
+}
+
+.ant-drawer-body {
+	background-color: #313139 !important;
+	color: #999999;
+}
+
+.anticon {
+	color: white;
+}
+
+.anticon-sun {
+	color: #313139 !important;
+}
+
+.anticon-moon {
+	color: #999999 !important;
+}
+
+.ant-segmented {
+	background-color: #999999 !important;
+}
+
+.ant-segmented-group {
+	background-color: #999999 !important;
+}
+
+.ant-segmented-item-selected {
+	background-color: #313139 !important;
+	color: #999999 !important;
+}

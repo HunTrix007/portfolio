@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 
 import profile from "./assets/images/profile.png";
 import client_1 from "/src/assets/images/clients/client_1.png";
@@ -17,9 +18,11 @@ import blog1 from "/src/assets/images/blog/blog1.jpg";
 import blog2 from "/src/assets/images/blog/blog2.jpg";
 import blog3 from "/src/assets/images/blog/blog3.jpg";
 
+
 // Import local scripts
 import "/src/assets/js/scripts.js";
-import { useEffect } from "react";
+import Customizer from "./components/customizer";
+
 function App() {
 
   useEffect(() => {
@@ -1169,6 +1172,9 @@ function App() {
           </div>
 
         </div>
+
+        {/* Theme Customizer */}
+        <Customizer />
       </div>
     </>
   )

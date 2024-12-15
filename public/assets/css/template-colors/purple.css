@@ -259,3 +259,11 @@ textarea:focus {
 .revs-carousel .owl-dot.active {
   background: #c446da;
 }
+
+.theme-customizer {
+	color: #c446da;
+}
+
+.theme-customizer:hover {
+    background-color: #c446da !important;
+}
