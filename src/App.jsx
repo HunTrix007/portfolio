@@ -1,6 +1,3 @@
-import { useEffect } from "react";
-
-import profile from "./assets/images/profile.png";
 import client_1 from "/src/assets/images/clients/client_1.png";
 import client_2 from "/src/assets/images/clients/client_2.png";
 import client_3 from "/src/assets/images/clients/client_3.png";
@@ -18,12 +15,26 @@ import blog1 from "/src/assets/images/blog/blog1.jpg";
 import blog2 from "/src/assets/images/blog/blog2.jpg";
 import blog3 from "/src/assets/images/blog/blog3.jpg";
 
-
 // Import local scripts
 import "/src/assets/js/scripts.js";
+
+import { useEffect } from "react";
+
 import Customizer from "./components/customizer";
+import data from "./data";
+import { ReactTyped } from "react-typed";
+import { Image } from "antd";
+import { ExpandOutlined } from "@ant-design/icons";
+import TechCard from "./components/techcard";
 
 function App() {
+
+  const getAge = () => {
+    const today = new Date();
+    const birth = new Date(data.about.birthDate);
+    return today.getFullYear() - birth.getFullYear() - 
+           (today < new Date(today.getFullYear(), birth.getMonth(), birth.getDate()) ? 1 : 0);
+  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -35,6 +46,7 @@ function App() {
       }
     }, 1000)
   }, [])
+
   return (
     <>
       <div className="page new-skin">
@@ -114,8 +126,7 @@ function App() {
           {/* Card - Started */}
           <div className="card-started" id="home-card">
 
-            {/*   Profile
-            */}
+            {/* Profile */}
             <div className="profile">
 
               {/* profile image */}
@@ -123,25 +134,29 @@ function App() {
 
               {/* profile photo */}
               <div className="image">
-                <img src={profile} alt="" />
+                <Image
+                  src={data.profile.profilePhoto}
+                  preview={{
+                    mask: <ExpandOutlined />
+                  }}
+                />
+                {/* <img src={data.profile.profilePhoto} alt="" /> */}
               </div>
 
               {/* profile titles */}
-              <div className="title">Sachinthaka Ayeshmantha</div>
-              <div className="subtitle">Web Designer</div>
+              <div className="title">{data.profile.firstName} {data.profile.lastName}</div>
+              <div className="subtitle"><ReactTyped strings={data.profile.jobTitles} typeSpeed={40} backSpeed={50} loop /></div>
 
               {/* profile socials */}
               <div className="social">
-                <a target="_blank" href="https://dribbble.com/"><span className="fab fa-dribbble"></span></a>
-                <a target="_blank" href="https://twitter.com/"><span className="fab fa-twitter"></span></a>
-                <a target="_blank" href="https://github.com/"><span className="fab fa-github"></span></a>
-                <a target="_blank" href="https://www.spotify.com/"><span className="fab fa-spotify"></span></a>
-                <a target="_blank" href="https://stackoverflow.com/"><span className="fab fa-stack-overflow"></span></a>
+                {data.profile.socials.map((social, index) => {
+                  return <a key={index} target="_blank" href={social.link}><span className={social.icon}></span></a>
+                })}
               </div>
 
               {/* profile buttons */}
               <div className="lnks">
-                <a href="#" className="lnk">
+                <a target="_blank" href={data.profile.cv} download className="lnk">
                   <span className="text">Download CV</span>
                   <span className="ion ion-archive"></span>
                 </a>
@@ -167,20 +182,18 @@ function App() {
 
                 {/* content */}
                 <div className="row">
-                  <div className="col col-d-12 col-t-12 col-m-12 border-line-v">
-                    <div className="text-box">
+                  <div className="col col-d-12 col-t-12 col-m-12 border-line-v" style={{paddingTop: 0}}>
+                    <div className="text-box" style={{padding: '15px 0'}}>
                       <p>
-                        I am Sachinthaka Ayeshmantha, web designer from USA, California. I have rich experience in
-                        web site design and building and customization, also I am good at wordpress.
-                        I love to talk with you about our unique.
+                        {data.about.desc}
                       </p>
                     </div>
                     <div className="info-list">
                       <ul>
-                        <li><strong>Age . . . . .</strong> 24</li>
-                        <li><strong>Residence . . . . .</strong> USA</li>
-                        <li><strong>Freelance . . . . .</strong> Available</li>
-                        <li><strong>Address . . . . .</strong> California, USA</li>
+                        <li><strong>Age . . . . .</strong> {getAge()}</li>
+                        <li><strong>Residence . . . . .</strong> {data.about.residence}</li>
+                        <li><strong>Freelance . . . . .</strong> {data.about.freelance}</li>
+                        <li><strong>Address . . . . .</strong> {data.about.address}</li>
                       </ul>
                     </div>
                   </div>
@@ -199,57 +212,27 @@ function App() {
                 <div className="row service-items border-line-v">
 
                   {/* service item */}
-                  <div className="col col-d-6 col-t-6 col-m-12 border-line-h">
-                    <div className="service-item">
-                      <div className="icon"><span className="ion ion-code"></span></div>
-                      <div className="name">Web Development</div>
-                      <p>
-                        Modern and mobile-ready website that will help you
-                        reach all of your marketing.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* service item */}
-                  <div className="col col-d-6 col-t-6 col-m-12 border-line-h">
-                    <div className="service-item">
-                      <div className="icon"><span className="ion ion-music-note"></span></div>
-                      <div className="name">Music Writing</div>
-                      <p>
-                        Music copying, transcription, arranging and composition services.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* service item */}
-                  <div className="col col-d-6 col-t-6 col-m-12">
-                    <div className="service-item">
-                      <div className="icon"><span className="ion ion-speakerphone"></span></div>
-                      <div className="name">Advetising</div>
-                      <p>
-                        Advertising services include television, radio, print, mail and web.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* service item */}
-                  <div className="col col-d-6 col-t-6 col-m-12">
-                    <div className="service-item">
-                      <div className="icon"><span className="ion ion-ios-game-controller-b"></span></div>
-                      <div className="name">Game Development</div>
-                      <p>
-                        Developing memorable and unique mobile android, ios games.
-                      </p>
-                    </div>
-                  </div>
-
+                  {data.services.map((item, index) => {
+                    return (
+                      <div key={index} className={`col col-d-6 col-t-6 col-m-12 ${(index == 0 || index == 1) && 'border-line-h'}`}>
+                        <div className="service-item">
+                          <div className="icon"><span className={item.icon}></span></div>
+                          <div className="name">{item.title}</div>
+                          <p>
+                            {item.description}
+                          </p>
+                        </div>
+                      </div>
+                    )
+                  })}
+                  
                   <div className="clear"></div>
                 </div>
 
               </div>
 
               {/* Price Tables */}
-              <div className="content pricing">
+              <div className="content pricing" style={{display: 'none'}}>
 
                 {/* title */}
                 <div className="title">Pricing</div>
@@ -319,7 +302,7 @@ function App() {
               </div>
 
               {/* Fun Fact */}
-              <div className="content fuct">
+              <div className="content fuct" style={{display: 'none'}}>
 
                 {/* title */}
                 <div className="title">Fun Fact</div>
@@ -358,6 +341,23 @@ function App() {
                       <div className="name">10 Countries Visited</div>
                     </div>
                   </div>
+
+                  <div className="clear"></div>
+                </div>
+
+              </div>
+
+              {/* Tech Stack */}
+              <div className="content fuct">
+
+                {/* title */}
+                <div className="title">Tech Stack</div>
+
+                {/* content */}
+                <div className="row fuct-items">
+
+                  {/* fuct item */}
+                  <TechCard />
 
                   <div className="clear"></div>
                 </div>
@@ -1107,7 +1107,7 @@ function App() {
                 <div className="row">
                   <div className="col col-d-12 col-t-12 col-m-12 border-line-v">
                     <div className="map" id="map">
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3959.4955576984407!2d79.99089007365399!3d7.06839631659425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMDQnMDYuMiJOIDc5wrA1OSczNi41IkU!5e0!3m2!1sen!2slk!4v1734184953841!5m2!1sen!2slk" width="100%" height="100%" style={{border:"0", boxShadow: '#0000002b 2px 2px 10px 5px'}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3959.4955576984767!2d79.99089007568188!3d7.068396316590061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMDQnMDYuMiJOIDc5wrA1OSczNi41IkU!5e0!3m2!1sen!2slk!4v1734328382114!5m2!1sen!2slk" style={{border:'0'}} height={'100%'} width={'100%'} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div className="info-list">
                       <ul>

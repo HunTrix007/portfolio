@@ -267,3 +267,7 @@ textarea:focus {
 .theme-customizer:hover {
     background-color: #0856c1 !important;
 }
+
+.slick-dots li.slick-active button:before {
+	color: #4488e8 !important;
+}

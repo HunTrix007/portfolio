@@ -480,6 +480,12 @@
 	-khtml-border-radius: 100%;
 }
 
+
+.card-started .profile .image .ant-image-mask {
+	border-radius: 100%;
+	-webkit-border-radius: 100%;
+}
+
 .card-started .profile .title {
 	margin: 0 0 10px 0;
 	font-size: 32px;

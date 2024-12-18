@@ -1,3 +1,4 @@
+/* Customizer */
 .theme-customizer {
     position: fixed;
     top: 10px;
@@ -31,4 +32,40 @@
     margin-top: 0;
     margin-bottom: 0.6rem;
     font-size: 0.875rem;
+}
+
+
+/* Carousel */
+.slick-dots {
+    left: 0;
+    width: auto !important;
+    padding-left: 20px !important;
+}
+
+.slick-prev {
+    left: auto !important;
+    right: 50px !important;
+    top: calc(100% + 16px) !important;
+}
+
+.slick-next {
+    left: auto !important;
+    right: 25px !important;
+    top: calc(100% + 16px) !important;
+}
+
+.slick-next, .slick-prev {
+    border-bottom-left-radius: 100% !important;
+    border-bottom-right-radius: 100% !important;
+}
+
+.tech-stack-imgs {
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(.5);
+    transition: filter 0.3s ease-out;
+}
+
+.tech-stack-imgs:hover {
+    filter: none;
 }

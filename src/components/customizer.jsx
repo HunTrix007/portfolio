@@ -2,14 +2,6 @@ import { Button, Col, Drawer, Row, Segmented } from 'antd';
 import { MoonOutlined, SettingOutlined, SunFilled, SunOutlined } from "@ant-design/icons";
 import { useEffect, useState } from 'react';
 
-// import green from '../assets/css/template-colors/green.css';
-// import blue from '../assets/css/template-colors/blue.css';
-
-    // <!--<link rel="stylesheet" href="/assets/css/template-colors/blue.css" />-->
-    // <!--<link rel="stylesheet" href="/assets/css/template-colors/orange.css" />-->
-    // <!--<link rel="stylesheet" href="/assets/css/template-colors/pink.css" />-->
-    // <!--<link rel="stylesheet" href="/assets/css/template-colors/purple.css" />-->
-    // <!--<link rel="stylesheet" href="/assets/css/template-colors/red.css" />-->
 const Customizer = () => {
     const [open, setOpen] = useState(false);
     const [prefs, setPrefs] = useState(JSON.parse(localStorage.getItem('prefs') || "{}"));
@@ -35,7 +27,7 @@ const Customizer = () => {
                 document.querySelector('#template-colors').setAttribute('href', "/portfolio/assets/css/template-colors/red.css");
                 break;
             default:
-                document.querySelector('#template-colors').setAttribute('href', "/portfolio/assets/css/template-colors/green.css");
+                document.querySelector('#template-colors').setAttribute('href', "/portfolio/assets/css/template-colors/blue.css");
                 break;
         }
 
