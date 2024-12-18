@@ -23,9 +23,10 @@ import { useEffect } from "react";
 import Customizer from "./components/customizer";
 import data from "./data";
 import { ReactTyped } from "react-typed";
-import { Image } from "antd";
+import { Button, Image } from "antd";
 import { ExpandOutlined } from "@ant-design/icons";
 import TechCard from "./components/techcard";
+import PreviewOnly from "./components/previewonly";
 
 function App() {
 
@@ -149,7 +150,7 @@ function App() {
 
               {/* profile socials */}
               <div className="social">
-                {data.profile.socials.map((social, index) => {
+                {data.profile.socials?.map((social, index) => {
                   return <a key={index} target="_blank" href={social.link}><span className={social.icon}></span></a>
                 })}
               </div>
@@ -212,7 +213,7 @@ function App() {
                 <div className="row service-items border-line-v">
 
                   {/* service item */}
-                  {data.services.map((item, index) => {
+                  {data.services?.map((item, index) => {
                     return (
                       <div key={index} className={`col col-d-6 col-t-6 col-m-12 ${(index == 0 || index == 1) && 'border-line-h'}`}>
                         <div className="service-item">
@@ -348,7 +349,7 @@ function App() {
               </div>
 
               {/* Tech Stack */}
-              <div className="content fuct">
+              <div className="content fuct" style={{marginBottom: '60px'}}>
 
                 {/* title */}
                 <div className="title">Tech Stack</div>
@@ -365,57 +366,28 @@ function App() {
               </div>
 
               {/* Clients */}
-              <div className="content clients">
+              <div className="content clients" style={{display: 'none'}}>
 
                 {/* title */}
-                <div className="title">Clients</div>
+                <div className="title">Clients & Partners</div>
 
                 {/* content */}
                 <div className="row client-items">
 
                   {/* client item */}
-                  <div className="col col-d-3 col-t-3 col-m-6 border-line-v">
-                    <div className="client-item">
-                      <div className="image">
-                        <a target="_blank" href="https://www.google.com">
-                          <img src={client_1} alt="" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* client item */}
-                  <div className="col col-d-3 col-t-3 col-m-6 border-line-v">
-                    <div className="client-item">
-                      <div className="image">
-                        <a target="_blank" href="https://www.google.com">
-                          <img src={client_2} alt="" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* client item */}
-                  <div className="col col-d-3 col-t-3 col-m-6 border-line-v">
-                    <div className="client-item">
-                      <div className="image">
-                        <a target="_blank" href="https://www.google.com">
-                          <img src={client_3} alt="" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* client item */}
-                  <div className="col col-d-3 col-t-3 col-m-6 border-line-v">
-                    <div className="client-item">
-                      <div className="image">
-                        <a target="_blank" href="https://www.google.com">
-                          <img src={client_4} alt="" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+                  {data.clients?.map((client, index) => {
+                      return (
+                        <div key={index} className="col col-d-3 col-t-3 col-m-6 border-line-v">
+                          <div className="client-item">
+                            <div className="image">
+                              <a target="_blank" href={client.link}>
+                                <img src={client.img} alt={client.name} title={client.name} />
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      )
+                  })}
 
                   <div className="clear"></div>
                 </div>
@@ -423,7 +395,7 @@ function App() {
               </div>
 
               {/* Testimonials */}
-              <div className="content testimonials">
+              <div className="content testimonials" style={{display: 'none'}}>
 
                 {/* title */}
                 <div className="title">Testimonials</div>
@@ -431,55 +403,29 @@ function App() {
                 {/* content */}
                 <div className="row testimonials-items">
 
-                  {/* client item */}
+                  {/* testimonial item */}
                   <div className="col col-d-12 col-t-12 col-m-12 border-line-v">
                     <div className="revs-carousel default-revs">
                       <div className="owl-carousel">
-                        <div className="item">
-                          <div className="revs-item">
-                            <div className="text">
-                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </div>
-                            <div className="user">
-                              <div className="img"><img src={man1} alt="" /></div>
-                              <div className="info">
-                                <div className="name">Helen Floyd</div>
-                                <div className="company">Art Director</div>
+                        {data.testimonials?.map((item, index) => {
+                            return (
+                              <div key={index} className="item">
+                                <div className="revs-item">
+                                  <div className="text">
+                                    {item.quote}
+                                  </div>
+                                  <div className="user">
+                                    <div className="img"><img src={item.img} alt={item.name} title={item.name} /></div>
+                                    <div className="info">
+                                      <div className="name">{item.name}</div>
+                                      <div className="company">{item.job}</div>
+                                    </div>
+                                    <div className="clear"></div>
+                                  </div>
+                                </div>
                               </div>
-                              <div className="clear"></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="item">
-                          <div className="revs-item">
-                            <div className="text">
-                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </div>
-                            <div className="user">
-                              <div className="img"><img src={man1} alt="" /></div>
-                              <div className="info">
-                                <div className="name">Robert Chase</div>
-                                <div className="company">CEO</div>
-                              </div>
-                              <div className="clear"></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="item">
-                          <div className="revs-item">
-                            <div className="text">
-                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </div>
-                            <div className="user">
-                              <div className="img"><img src={man1} alt="" /></div>
-                              <div className="info">
-                                <div className="name">Helen Floyd</div>
-                                <div className="company">Art Director</div>
-                              </div>
-                              <div className="clear"></div>
-                            </div>
-                          </div>
-                        </div>
+                            )
+                        })}
                       </div>
                     </div>
                   </div>
@@ -512,30 +458,18 @@ function App() {
                       <div className="name">Experience</div>
                     </div>
                     <div className="resume-items">
-                      <div className="resume-item border-line-h active">
-                        <div className="date">2013 - Present</div>
-                        <div className="name">Art Director</div>
-                        <div className="company">Facebook Inc.</div>
-                        <p>
-                          Collaborate with creative and development teams on the execution of ideas.
-                        </p>
-                      </div>
-                      <div className="resume-item border-line-h">
-                        <div className="date">2011 - 2012</div>
-                        <div className="name">Front-end Developer</div>
-                        <div className="company">Google Inc.</div>
-                        <p>
-                          Monitored technical aspects of the front-end delivery for several projects.
-                        </p>
-                      </div>
-                      <div className="resume-item">
-                        <div className="date">2009 - 2010</div>
-                        <div className="name">Senior Developer</div>
-                        <div className="company">Abc Inc.</div>
-                        <p>
-                          Optimize website performance using latest technology.
-                        </p>
-                      </div>
+                      {data.resume.experience?.map((item, index) => {
+                        return (
+                          <div key={index} className={`resume-item ${(data.resume.experience.length != index+1) && 'border-line-h'} ${item.isActive && 'active'}`}>
+                            <div className="date">{item.duration}</div>
+                            <div className="name">{item.role}</div>
+                            <div className="company">{item.company}</div>
+                            {item.img &&
+                              <PreviewOnly img={item.img} />
+                            }
+                          </div>
+                        )
+                      })}
                     </div>
                   </div>
 
@@ -546,30 +480,18 @@ function App() {
                       <div className="name">Education</div>
                     </div>
                     <div className="resume-items">
-                      <div className="resume-item border-line-h">
-                        <div className="date">2006 - 2008</div>
-                        <div className="name">Art University</div>
-                        <div className="company">New York</div>
-                        <p>
-                          Bachelor's Degree in Computer Science ABC Technical Institute, Jefferson, Missouri
-                        </p>
-                      </div>
-                      <div className="resume-item border-line-h">
-                        <div className="date">2005 - 2006</div>
-                        <div className="name">Programming Course</div>
-                        <div className="company">Paris</div>
-                        <p>
-                          Coursework - Git, WordPress, Javascript, iOS, Android.
-                        </p>
-                      </div>
-                      <div className="resume-item">
-                        <div className="date">2004 - 2005</div>
-                        <div className="name">Web Design Course</div>
-                        <div className="company">London</div>
-                        <p>
-                          Converted Photoshop layouts to web pages using HTML, CSS, and JavaScript
-                        </p>
-                      </div>
+                      {data.resume.education?.map((item, index) => {
+                        return (
+                          <div key={index} className={`resume-item ${(data.resume.experience.length != index+1) && 'border-line-h'} ${item.isActive && 'active'}`}>
+                            <div className="date">{item.duration}</div>
+                            <div className="name">{item.qualification}</div>
+                            <div className="company">{item.institute}</div>
+                            {item.img &&
+                              <PreviewOnly img={item.img} />
+                            }
+                          </div>
+                        )
+                      })}
                     </div>
                   </div>
 

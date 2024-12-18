@@ -59,13 +59,11 @@
     border-bottom-right-radius: 100% !important;
 }
 
+.slick-next::before, .slick-prev::before {    
+    color: #7e7e7e !important;
+}
+
 .tech-stack-imgs {
     width: 100%;
     cursor: pointer;
-    filter: grayscale(.5);
-    transition: filter 0.3s ease-out;
-}
-
-.tech-stack-imgs:hover {
-    filter: none;
 }

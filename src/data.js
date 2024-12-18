@@ -1,4 +1,6 @@
 import profile from "./assets/images/profile.png";
+
+// Tech
 import html5 from "./assets/images/techstack/html.png";
 import css3 from "./assets/images/techstack/css.png";
 import js from "./assets/images/techstack/js.png";
@@ -6,6 +8,23 @@ import react from "./assets/images/techstack/react.png";
 import nodejs from "./assets/images/techstack/nodejs.png";
 import mongodb from "./assets/images/techstack/mongodb.png";
 import git from "./assets/images/techstack/git.png";
+import sqlserver from "./assets/images/techstack/sqlserver.png";
+import mysql from "./assets/images/techstack/mysql.png";
+import php from "./assets/images/techstack/php.png";
+import go from "./assets/images/techstack/go.png";
+import aws from "./assets/images/techstack/aws.png";
+import java from "./assets/images/techstack/java.png";
+import cpp from "./assets/images/techstack/cpp.png";
+import c from "./assets/images/techstack/c.png";
+import cpanel from "./assets/images/techstack/cpanel.png";
+import postman from "./assets/images/techstack/postman.png";
+import googlecloud from "./assets/images/techstack/googlecloud.png";
+import flutter from "./assets/images/techstack/flutter.png";
+import github from "./assets/images/techstack/github.png";
+
+// Clients
+import pixelcoreholdings from "./assets/images/clients/pixelcoreholdings.png";
+import pixelcoreit from "./assets/images/clients/pixelcoreit.png";
 
 const data = {
     profile: {
@@ -64,6 +83,50 @@ const data = {
     ],
     technologies: [
         {
+            title: 'React',
+            img: react
+        },
+        {
+            title: 'Node.js',
+            img: nodejs
+        },
+        {
+            title: 'Golang',
+            img: go,
+        },
+        {
+            title: 'Flutter',
+            img: flutter,
+        },
+        {
+            title: 'PHP',
+            img: php,
+        },
+        {
+            title: 'Java',
+            img: java,
+        },
+        {
+            title: 'SQL Server',
+            img: sqlserver,
+        },
+        {
+            title: 'MySQL',
+            img: mysql,
+        },
+        {
+            title: 'MongoDB',
+            img: mongodb
+        },
+        {
+            title: 'AWS',
+            img: aws,
+        },
+        {
+            title: 'Google Console',
+            img: googlecloud,
+        },
+        {
             title: 'HTML5',
             img: html5
         },
@@ -76,74 +139,78 @@ const data = {
             img: js
         },
         {
-            title: 'React',
-            img: react
-        },
-        {
-            title: 'SQL Server',
-            img: nodejs,
-        },
-        {
-            title: 'MySQL',
-            img: nodejs,
-        },
-        {
-            title: 'PHP',
-            img: nodejs,
-        },
-        {
-            title: 'Golang',
-            img: nodejs,
-        },
-        {
-            title: 'AWS',
-            img: nodejs,
-        },
-        {
-            title: 'Java',
-            img: nodejs,
+            title: 'C',
+            img: c,
         },
         {
             title: 'C++',
-            img: nodejs,
-        },
-        {
-            title: 'C',
-            img: nodejs,
+            img: cpp,
         },
         {
             title: 'Postman',
-            img: nodejs,
-        },
-        {
-            title: 'GitHub',
-            img: nodejs,
+            img: postman,
         },
         {
             title: 'cPanel',
-            img: nodejs,
-        },
-        {
-            title: 'Google Console',
-            img: nodejs,
-        },
-        {
-            title: 'Flutter',
-            img: nodejs,
-        },
-        {
-            title: 'Node.js',
-            img: nodejs
-        },
-        {
-            title: 'MongoDB',
-            img: mongodb
+            img: cpanel,
         },
         {
             title: 'Git',
             img: git
+        },
+        {
+            title: 'GitHub',
+            img: github,
+        },
+    ],
+    clients: [
+        {
+            name: 'PixelCore Holdings (Pvt) Ltd.',
+            img: pixelcoreholdings,
+            link: 'https://pixelcore.lk'
+        },
+        {
+            name: 'PixelCore IT Solutions',
+            img: pixelcoreit,
+            link: 'https://pixelcore.lk'
         }
-    ]
+    ],
+    testimonials: [
+        {
+            name: '',
+            job: '',
+            img: '',
+            quote: ''
+        }
+    ],
+    resume: {
+        experience: [
+            {
+                duration: '2024 Feb - Present',
+                role: 'Associate Software Engineer',
+                company: '21c Care (Pvt) Ltd.',
+                desc: 'Lead and develop web based systems for hospitals, schools, pharmacies and more.',
+                img: '',
+                isActive: true
+            },
+            {
+                duration: '2023 Dec - 2024 Feb',
+                role: 'Intern Software Engineer',
+                company: '21c Care (Pvt) Ltd.',
+                desc: 'Contribute to ongoing projects while learning new technologies and best practices.',
+                img: '',
+            }
+        ],
+        education: [
+            {
+                duration: '2022 Jan - 2026 Jan',
+                qualification: 'BSc (Hons) in Software Engineering',
+                institute: 'Sri Lanka Institute of Information Technology',
+                img: '',
+                isActive: true
+            },
+        ]
+    }
 
 }
 
