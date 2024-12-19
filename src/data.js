@@ -209,8 +209,15 @@ const data = {
                 img: '',
                 isActive: true
             },
+            {
+                duration: '2021',
+                qualification: 'International Advanced Level (IAL)',
+                institute: 'Horizon College International',
+                img: '',
+            },
         ]
-    }
+    },
+    
 
 }
 
