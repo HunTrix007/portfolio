@@ -7,33 +7,36 @@ const Customizer = () => {
     const [prefs, setPrefs] = useState(JSON.parse(localStorage.getItem('prefs') || "{}"));
     
     useEffect(() => {
-        switch (prefs.color) {
-            case "green":
-                document.querySelector('#template-colors').setAttribute('href', "/portfolio/assets/css/template-colors/green.css");
-                break;
-            case "blue":
-                document.querySelector('#template-colors').setAttribute('href', "/portfolio/assets/css/template-colors/blue.css");
-                break;
-            case "orange":
-                document.querySelector('#template-colors').setAttribute('href', "/portfolio/assets/css/template-colors/orange.css");
-                break;       
-            case "pink":
-                document.querySelector('#template-colors').setAttribute('href', "/portfolio/assets/css/template-colors/pink.css");
-                break;
-            case "purple":
-                document.querySelector('#template-colors').setAttribute('href', "/portfolio/assets/css/template-colors/purple.css");
-                break;
-            case "red":
-                document.querySelector('#template-colors').setAttribute('href', "/portfolio/assets/css/template-colors/red.css");
-                break;
-            default:
-                document.querySelector('#template-colors').setAttribute('href', "/portfolio/assets/css/template-colors/blue.css");
-                break;
+        let tempcolors = document.getElementById('template-colors');
+        if (tempcolors) tempcolors.remove();
+        const colorslink = document.createElement('link');
+        colorslink.rel = 'stylesheet';
+        colorslink.id = 'template-colors';
+        colorslink.type = 'text/css';
+        colorslink.href = `/portfolio/assets/css/template-colors/${prefs.color}.css`; 
+        document.head.appendChild(colorslink);
+
+        let tempdark = document.getElementById('template-dark');
+        if (tempdark) tempdark.remove();
+        if (prefs.dark) {
+            const darklink = document.createElement('link');
+            darklink.rel = 'stylesheet';
+            darklink.id = 'template-dark';
+            darklink.type = 'text/css';
+            darklink.href = `/portfolio/assets/css/template-dark/dark.css`; 
+            document.head.appendChild(darklink);
         }
 
-        document.querySelector('#template-dart').setAttribute('href', prefs.dark ? "/portfolio/assets/css/template-dark/dark.css" : "#");
-
-        document.querySelector('#template-rtl').setAttribute('href', prefs.rtl ? "/portfolio/assets/css/rtl.css" : "#");
+        let temprtl = document.getElementById('template-rtl');
+        if (temprtl) temprtl.remove();
+        if (prefs.rtl) {
+            const rtllink = document.createElement('link');
+            rtllink.rel = 'stylesheet';
+            rtllink.id = 'template-rtl';
+            rtllink.type = 'text/css';
+            rtllink.href = `/portfolio/assets/css/rtl.css`; 
+            document.head.appendChild(rtllink);
+        }
 
         localStorage.setItem('prefs', JSON.stringify(prefs));
     }, [prefs])
